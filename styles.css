@@ -1,0 +1,77 @@
+   :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }/*sets up colors for the background to change*/
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+  }/*body definition*/
+  
+  body.correct {
+    --hue: var(--hue-correct);
+  }/*green color to show correct background*/
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }/*red color to show wrong background*/
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }/*container class definition*/
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }/*container class definition*/
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+  }/*btn class definition*/
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }/*btn. correct class definition*/
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }/*btn.wrong class definition*/
+  
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }/*start and next btn class definition*/
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }/*controls class definition*/
+  
+  .hide {
+    display: none;
+  }
+  
